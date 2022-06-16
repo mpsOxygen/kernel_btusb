@@ -3,16 +3,16 @@
 import mmap
 import os
 
-
 patch = {
-        'path': '/lib/modules/' + os.uname().release + '/kernel/drivers/bluetooth/',
-        'file':      'btusb.ko.xz',
-		'offset': 	 0x0,
-		'original':  b'\x64',
-		'patched': 	 b'\x68',
-        'id_search': b'\xd3\x13\x64\x35',
-        'id_patch':  b'\xd3\x13\x68\x35'
-	}
+    'path': '/lib/modules/' + os.uname().release + '/kernel/drivers/bluetooth/',
+    'file': 'btusb.ko.xz',
+    'offset': 0x0,
+    'original': b'\x64',
+    'patched': b'\x68',
+    'id_search': b'\xd3\x13\x64\x35',
+    'id_patch': b'\xd3\x13\x68\x35'
+}
+
 
 def bt_patch():
     os.system('cp ' + patch['path'] + patch['file'] + ' .')
@@ -43,8 +43,10 @@ def bt_patch():
         print('  sudo cp ' + patch['file'] + ' ' + patch['path'])
     return
 
+
 def main():
     bt_patch()
+
 
 if __name__ == '__main__':
     main()
