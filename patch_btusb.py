@@ -40,7 +40,9 @@ def bt_patch():
         print('Compressing back...')
         os.system('xz ' + patch['file'][:-3])
         print('Now all you have to do is: ')
+        print('  sudo modprobe -r btusb')
         print('  sudo cp ' + patch['file'] + ' ' + patch['path'])
+        print('  sudo modprobe btusb')
     return
 
 
