@@ -1,4 +1,5 @@
 #Looks like this is no longer needed as the patch has been merged in 5.18.17-200#
+
 ~# Quick and dirty patch for Mediatek 7922 bluetooth on Fedora 36~
 
 This is a quick and dirty script to enable bluetooth on Mediatek 7922 chips on Fedora 36 (but should work with any distro).
